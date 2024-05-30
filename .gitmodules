@@ -1,0 +1,3 @@
+[submodule "Simpro/vendor/spdlog"]
+	path = Simpro/vendor/spdlog
+	url = git@github.com:gabime/spdlog.git
