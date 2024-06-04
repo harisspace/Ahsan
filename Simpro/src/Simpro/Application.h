@@ -1,10 +1,11 @@
 #pragma once
 
 #include "Core.h"
+#include "Events/Event.h"
 
 namespace Simpro {
 
-	class SP_API Application
+	class SIMPRO_API Application
 	{
 	public:
 		Application();

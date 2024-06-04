@@ -28,6 +28,7 @@ project "Simpro"
 	includedirs
 	{
 		"%{prj.name}/vendor/spdlog/include"
+		"src"
 	}
 
 	filter "system:windows"

@@ -19,6 +19,10 @@
     <ClInclude Include="src\Simpro\Log.h">
       <Filter>Simpro</Filter>
     </ClInclude>
+    <ClInclude Include="src\Simpro\Events\Event.h" />
+    <ClInclude Include="src\Simpro\Events\KeyEvent.h" />
+    <ClInclude Include="src\Simpro\Events\MouseEvent.h" />
+    <ClInclude Include="src\Simpro\Events\ApplicationEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Simpro\Application.cpp">

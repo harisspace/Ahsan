@@ -4,10 +4,11 @@
 
 #include "Core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace Simpro {
 
-	class SP_API Log
+	class SIMPRO_API Log
 	{
 	public:
 		static void Init();

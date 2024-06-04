@@ -79,7 +79,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SP_PLATFORM_WINDOWS;SP_BUILD_DLL;SP_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>vendor\spdlog\include;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -142,6 +142,10 @@
     <ClInclude Include="src\Simpro\Application.h" />
     <ClInclude Include="src\Simpro\Core.h" />
     <ClInclude Include="src\Simpro\EntryPoint.h" />
+    <ClInclude Include="src\Simpro\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Simpro\Events\Event.h" />
+    <ClInclude Include="src\Simpro\Events\KeyEvent.h" />
+    <ClInclude Include="src\Simpro\Events\MouseEvent.h" />
     <ClInclude Include="src\Simpro\Log.h" />
   </ItemGroup>
   <ItemGroup>
