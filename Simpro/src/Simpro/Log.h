@@ -31,5 +31,5 @@ namespace Simpro {
 #define SP_TRACE(...)	::Simpro::Log::GetCoreLogger()->trace(__VA_ARGS__)
 #define SP_INFO(...)	::Simpro::Log::GetCoreLogger()->info(__VA_ARGS__)
 #define SP_WARN(...)	::Simpro::Log::GetCoreLogger()->warn(__VA_ARGS__)
-#define SP_ERROR(...)	::Simpro::Log::GetCoreLogger()->error(__VA_ARGS__)
+// #define SP_ERROR(...)	::Simpro::Log::GetCoreLogger()->error(__VA_ARGS__)
 #define SP_FATAL(...)	::Simpro::Log::GetCoreLogger()->fatal(__VA_ARGS__)

@@ -38,12 +38,12 @@ project "Simpro"
 		defines 
 		{
 			"SP_PLATFORM_WINDOWS",
-			"SP_DLL_BUILD"
+			"SP_BUILD_DLL"
 		}
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.realpath} ../bin/" .. outputdir .. "/Sandbox")
+			("{COPYFILE} %{cfg.buildtarget.abspath} ../bin/" .. outputdir .. "/Sandbox")
 		}
 
 	filter "configurations:Debug"
@@ -73,7 +73,7 @@ project "Sandbox"
 
 	includedirs
 	{
-		"%{prj.name}/vendor/spdlog/include",
+		"Simpro/vendor/spdlog/include",
 		"Simpro/src"
 	}
 
