@@ -1,6 +1,6 @@
-#include <Simpro.h>
+#include <Ahsan.h>
 
-class Sandbox : public Simpro::Application
+class Sandbox : public Ahsan::Application
 {
 public:
 	Sandbox()
@@ -14,7 +14,7 @@ public:
 	}
 };
 
-Simpro::Application* Simpro::CreateApplication()
+Ahsan::Application* Ahsan::CreateApplication()
 {
 	return new Sandbox();
 }

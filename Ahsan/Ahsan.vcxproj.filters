@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Ahsan">
+      <UniqueIdentifier>{7036D20C-DC4A-FABD-A5CC-9D1D11A0F6EE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ahsan\Events">
+      <UniqueIdentifier>{5444BC37-40A7-4BDC-E92C-8492D56E175F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Ahsan.h" />
+    <ClInclude Include="src\Ahsan\Application.h">
+      <Filter>Ahsan</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ahsan\Core.h">
+      <Filter>Ahsan</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ahsan\EntryPoint.h">
+      <Filter>Ahsan</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ahsan\Events\ApplicationEvent.h">
+      <Filter>Ahsan\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ahsan\Events\Event.h">
+      <Filter>Ahsan\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ahsan\Events\KeyEvent.h">
+      <Filter>Ahsan\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ahsan\Events\MouseEvent.h">
+      <Filter>Ahsan\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ahsan\Log.h">
+      <Filter>Ahsan</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Ahsan\Application.cpp">
+      <Filter>Ahsan</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Ahsan\Log.cpp">
+      <Filter>Ahsan</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

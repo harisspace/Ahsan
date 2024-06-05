@@ -3,9 +3,9 @@
 #include <string>
 #include <functional>
 
-#include "Simpro/Core.h"
+#include "Ahsan/Core.h"
 
-namespace Simpro {
+namespace Ahsan {
 
 	enum class EventType
 	{
@@ -32,7 +32,7 @@ namespace Simpro {
 
 #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
 
-	class SIMPRO_API Event
+	class AHSAN_API Event
 	{
 		friend class EventDispatcher;
 	public:

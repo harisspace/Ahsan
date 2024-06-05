@@ -1,10 +1,10 @@
 #include "Application.h"
 
-#include "Simpro/Events/ApplicationEvent.h"
-#include "Simpro/Log.h"
+#include "Ahsan/Events/ApplicationEvent.h"
+#include "Ahsan/Log.h"
 
 
-namespace Simpro {
+namespace Ahsan {
 
 	Application::Application()
 	{
@@ -22,11 +22,11 @@ namespace Simpro {
 
 		if (e.IsInCategory(EventCategoryApplication))
 		{
-			SP_TRACE("hello");
+			AH_TRACE("hello");
 		}
 		if (e.IsInCategory(EventCategoryInput))
 		{
-			SP_TRACE("World!");
+			AH_TRACE("World!");
 		}
 
 		while (true);

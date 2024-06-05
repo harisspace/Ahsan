@@ -4,9 +4,9 @@
 
 #include <sstream>
 
-namespace Simpro {
+namespace Ahsan {
 
-	class SIMPRO_API KeyEvent : public Simpro::Event
+	class AHSAN_API KeyEvent : public Ahsan::Event
 	{
 	public:
 		inline int GetKeyCode() const { return m_KeyCode; };
@@ -20,7 +20,7 @@ namespace Simpro {
 		int m_KeyCode;
 	};
 
-	class SIMPRO_API KeyPressedEvent : public KeyEvent
+	class AHSAN_API KeyPressedEvent : public KeyEvent
 	{
 	public:
 		KeyPressedEvent(int keycode, int repeatedCount)
@@ -40,7 +40,7 @@ namespace Simpro {
 		int m_RepeatCount;
 	};
 
-	class SIMPRO_API KeyReleasedEvent : public KeyEvent
+	class AHSAN_API KeyReleasedEvent : public KeyEvent
 	{
 	public:
 		KeyReleasedEvent(int keycode)

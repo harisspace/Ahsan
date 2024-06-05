@@ -4,9 +4,9 @@
 
 #include <sstream>
 
-namespace Simpro {
+namespace Ahsan {
 
-	class SIMPRO_API WindowResizeEvent : public Event
+	class AHSAN_API WindowResizeEvent : public Event
 	{
 	public:
 		WindowResizeEvent(unsigned int width, unsigned int height)
@@ -29,7 +29,7 @@ namespace Simpro {
 		unsigned int m_Width, m_Height;
 	};
 
-	class SIMPRO_API WindowCloseEvent : public Event
+	class AHSAN_API WindowCloseEvent : public Event
 	{
 	public:
 		WindowCloseEvent() {}
@@ -38,7 +38,7 @@ namespace Simpro {
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
-	class SIMPRO_API AppTickEvent : public Event
+	class AHSAN_API AppTickEvent : public Event
 	{
 	public:
 		AppTickEvent() {}
@@ -47,7 +47,7 @@ namespace Simpro {
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
-	class SIMPRO_API AppUpdateEvent : public Event
+	class AHSAN_API AppUpdateEvent : public Event
 	{
 	public:
 		AppUpdateEvent() {}
@@ -56,7 +56,7 @@ namespace Simpro {
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
-	class SIMPRO_API AppRenderEvent : public Event
+	class AHSAN_API AppRenderEvent : public Event
 	{
 	public:
 		AppRenderEvent() {}

@@ -15,10 +15,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{BFEE24D1-AB90-4FA7-944B-63FB808CD6F7}</ProjectGuid>
+    <ProjectGuid>{7036D20C-DC4A-FABD-A5CC-9D1D11A0F6EE}</ProjectGuid>
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Simpro</RootNamespace>
+    <RootNamespace>Ahsan</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -55,30 +55,30 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\bin\Debug-windows-x86_64\Simpro\</OutDir>
-    <IntDir>..\bin-int\Debug-windows-x86_64\Simpro\</IntDir>
-    <TargetName>Simpro</TargetName>
+    <OutDir>..\bin\Debug-windows-x86_64\Ahsan\</OutDir>
+    <IntDir>..\bin-int\Debug-windows-x86_64\Ahsan\</IntDir>
+    <TargetName>Ahsan</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\bin\Release-windows-x86_64\Simpro\</OutDir>
-    <IntDir>..\bin-int\Release-windows-x86_64\Simpro\</IntDir>
-    <TargetName>Simpro</TargetName>
+    <OutDir>..\bin\Release-windows-x86_64\Ahsan\</OutDir>
+    <IntDir>..\bin-int\Release-windows-x86_64\Ahsan\</IntDir>
+    <TargetName>Ahsan</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\bin\Dist-windows-x86_64\Simpro\</OutDir>
-    <IntDir>..\bin-int\Dist-windows-x86_64\Simpro\</IntDir>
-    <TargetName>Simpro</TargetName>
+    <OutDir>..\bin\Dist-windows-x86_64\Ahsan\</OutDir>
+    <IntDir>..\bin-int\Dist-windows-x86_64\Ahsan\</IntDir>
+    <TargetName>Ahsan</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>SP_PLATFORM_WINDOWS;SP_BUILD_DLL;SP_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>AH_PLATFORM_WINDOWS;AH_BUILD_DLL;AH_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>vendor\spdlog\include;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
@@ -89,18 +89,18 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ImportLibrary>..\bin\Debug-windows-x86_64\Simpro\Simpro.lib</ImportLibrary>
+      <ImportLibrary>..\bin\Debug-windows-x86_64\Ahsan\Ahsan.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>copy /B /Y ..\bin\Debug-windows-x86_64\Simpro\Simpro.dll ..\bin\Debug-windows-x86_64\Sandbox</Command>
+      <Command>copy /B /Y ..\bin\Debug-windows-x86_64\Ahsan\Ahsan.dll ..\bin\Debug-windows-x86_64\Sandbox</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>SP_PLATFORM_WINDOWS;SP_BUILD_DLL;SP_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>AH_PLATFORM_WINDOWS;AH_BUILD_DLL;AH_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>vendor\spdlog\include;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -110,18 +110,18 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ImportLibrary>..\bin\Release-windows-x86_64\Simpro\Simpro.lib</ImportLibrary>
+      <ImportLibrary>..\bin\Release-windows-x86_64\Ahsan\Ahsan.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>copy /B /Y ..\bin\Release-windows-x86_64\Simpro\Simpro.dll ..\bin\Release-windows-x86_64\Sandbox</Command>
+      <Command>copy /B /Y ..\bin\Release-windows-x86_64\Ahsan\Ahsan.dll ..\bin\Release-windows-x86_64\Sandbox</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>SP_PLATFORM_WINDOWS;SP_BUILD_DLL;SP_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>AH_PLATFORM_WINDOWS;AH_BUILD_DLL;AH_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>vendor\spdlog\include;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -131,26 +131,26 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ImportLibrary>..\bin\Dist-windows-x86_64\Simpro\Simpro.lib</ImportLibrary>
+      <ImportLibrary>..\bin\Dist-windows-x86_64\Ahsan\Ahsan.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>copy /B /Y ..\bin\Dist-windows-x86_64\Simpro\Simpro.dll ..\bin\Dist-windows-x86_64\Sandbox</Command>
+      <Command>copy /B /Y ..\bin\Dist-windows-x86_64\Ahsan\Ahsan.dll ..\bin\Dist-windows-x86_64\Sandbox</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Simpro.h" />
-    <ClInclude Include="src\Simpro\Application.h" />
-    <ClInclude Include="src\Simpro\Core.h" />
-    <ClInclude Include="src\Simpro\EntryPoint.h" />
-    <ClInclude Include="src\Simpro\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\Simpro\Events\Event.h" />
-    <ClInclude Include="src\Simpro\Events\KeyEvent.h" />
-    <ClInclude Include="src\Simpro\Events\MouseEvent.h" />
-    <ClInclude Include="src\Simpro\Log.h" />
+    <ClInclude Include="src\Ahsan.h" />
+    <ClInclude Include="src\Ahsan\Application.h" />
+    <ClInclude Include="src\Ahsan\Core.h" />
+    <ClInclude Include="src\Ahsan\EntryPoint.h" />
+    <ClInclude Include="src\Ahsan\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Ahsan\Events\Event.h" />
+    <ClInclude Include="src\Ahsan\Events\KeyEvent.h" />
+    <ClInclude Include="src\Ahsan\Events\MouseEvent.h" />
+    <ClInclude Include="src\Ahsan\Log.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Simpro\Application.cpp" />
-    <ClCompile Include="src\Simpro\Log.cpp" />
+    <ClCompile Include="src\Ahsan\Application.cpp" />
+    <ClCompile Include="src\Ahsan\Log.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

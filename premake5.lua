@@ -1,4 +1,4 @@
-workspace "Simpro"
+workspace "Ahsan"
 	architecture "x64"
 	startproject "Sandbox"
 
@@ -11,8 +11,8 @@ workspace "Simpro"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
-project "Simpro"
-	location "Simpro"
+project "Ahsan"
+	location "Ahsan"
 	kind "sharedlib"
 	language "C++"
 
@@ -27,8 +27,8 @@ project "Simpro"
 
 	includedirs
 	{
-		"%{prj.name}/vendor/spdlog/include"
-		"src"
+		"%{prj.name}/vendor/spdlog/include",
+		"Ahsan/src"
 	}
 
 	filter "system:windows"
@@ -38,8 +38,8 @@ project "Simpro"
 
 		defines 
 		{
-			"SP_PLATFORM_WINDOWS",
-			"SP_BUILD_DLL"
+			"AH_PLATFORM_WINDOWS",
+			"AH_BUILD_DLL"
 		}
 
 		postbuildcommands
@@ -48,14 +48,14 @@ project "Simpro"
 		}
 
 	filter "configurations:Debug"
-		defines "SP_DEBUG"
+		defines "AH_DEBUG"
 		symbols "On"
 
 	filter "configurations:Release"
-		defines "SP_RELEASE"
+		defines "AH_RELEASE"
 		symbols "On"
 	filter "configurations:Dist"
-		defines "SP_DIST"
+		defines "AH_DIST"
 		symbols "On"
 
 project "Sandbox"
@@ -74,13 +74,13 @@ project "Sandbox"
 
 	includedirs
 	{
-		"Simpro/vendor/spdlog/include",
-		"Simpro/src"
+		"Ahsan/vendor/spdlog/include",
+		"Ahsan/src"
 	}
 
 	links 
 	{
-		"Simpro"
+		"Ahsan"
 	}
 
 	filter "system:windows"
@@ -90,17 +90,17 @@ project "Sandbox"
 
 		defines 
 		{
-			"SP_PLATFORM_WINDOWS"
+			"AH_PLATFORM_WINDOWS"
 		}
 
 	filter "configurations:Debug"
-		defines "SP_DEBUG"
+		defines "AH_DEBUG"
 		symbols "On"
 
 	filter "configurations:Release"
-		defines "SP_RELEASE"
+		defines "AH_RELEASE"
 		symbols "On"
 	filter "configurations:Dist"
-		defines "SP_DIST"
+		defines "AH_DIST"
 		symbols "On"
 

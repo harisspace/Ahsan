@@ -3,9 +3,9 @@
 #include "Core.h"
 #include "Events/Event.h"
 
-namespace Simpro {
+namespace Ahsan {
 
-	class SIMPRO_API Application
+	class AHSAN_API Application
 	{
 	public:
 		Application();

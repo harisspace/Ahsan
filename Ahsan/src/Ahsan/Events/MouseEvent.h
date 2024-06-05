@@ -4,9 +4,9 @@
 
 #include <sstream>
 
-namespace Simpro {
+namespace Ahsan {
 
-	class SIMPRO_API MouseMovedEvent : public Event
+	class AHSAN_API MouseMovedEvent : public Event
 	{
 	public:
 		MouseMovedEvent(float x, float y)
@@ -29,7 +29,7 @@ namespace Simpro {
 		float m_MouseX, m_MouseY;
 	};
 
-	class SIMPRO_API MouseScrolledEvent : public Event
+	class AHSAN_API MouseScrolledEvent : public Event
 	{
 	public:
 		MouseScrolledEvent(float xOffset, float yOffset)
@@ -52,7 +52,7 @@ namespace Simpro {
 		float m_XOffset, m_YOffset;
 	};
 
-	class SIMPRO_API MouseButtonEvent : public Event
+	class AHSAN_API MouseButtonEvent : public Event
 	{
 	public:
 		inline int GetMouseButton() const { return m_Button; }
@@ -65,7 +65,7 @@ namespace Simpro {
 		int m_Button;
 	};
 
-	class SIMPRO_API MouseButtonPressedEvent : public MouseButtonEvent
+	class AHSAN_API MouseButtonPressedEvent : public MouseButtonEvent
 	{
 	public:
 		MouseButtonPressedEvent(int button)
@@ -81,7 +81,7 @@ namespace Simpro {
 		EVENT_CLASS_TYPE(MouseButtonPressed)
 	};
 
-	class SIMPRO_API MouseButtonReleasedEvent : public MouseButtonEvent
+	class AHSAN_API MouseButtonReleasedEvent : public MouseButtonEvent
 	{
 	public:
 		MouseButtonReleasedEvent(int button)
