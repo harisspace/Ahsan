@@ -1,3 +1,4 @@
+#include "ahpch.h"
 #include "Application.h"
 
 #include "Ahsan/Events/ApplicationEvent.h"
@@ -31,4 +32,5 @@ namespace Ahsan {
 
 		while (true);
 	}
+
 }

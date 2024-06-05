@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Ahsan {
 
 	class AHSAN_API MouseMovedEvent : public Event

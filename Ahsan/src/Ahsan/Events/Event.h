@@ -1,9 +1,7 @@
 #pragma once
 
-#include <string>
-#include <functional>
-
 #include "Ahsan/Core.h"
+
 
 namespace Ahsan {
 
@@ -79,4 +77,5 @@ namespace Ahsan {
 	{
 		return os << e.ToString();
 	}
+
 }
