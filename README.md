@@ -11,4 +11,4 @@ Start by cloning the repository with `git clone --recursive https://github.com/h
 
 <ins>**2. Build and Running**<ins>
 
-Run the [GenerateProject.bat](https://github.com/harisspace/Ahsan/blob/master/GenerateProject.bat) file. The file will generate a Visual Studio solution file created by premake
+Run the [GenerateProject.bat](https://github.com/harisspace/Ahsan/blob/master/GenerateProjects.bat) file. The file will generate a Visual Studio solution file created by premake
