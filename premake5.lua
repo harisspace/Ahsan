@@ -10,6 +10,10 @@ workspace "Ahsan"
 	}
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+IncludeDir = {}
+IncludeDir["GLFW"] = "Ahsan/vendor/GLFW/include"
+
+include "Ahsan/vendor/GLFW"
 
 project "Ahsan"
 	location "Ahsan"
@@ -31,7 +35,14 @@ project "Ahsan"
 	includedirs
 	{
 		"%{prj.name}/vendor/spdlog/include",
-		"Ahsan/src"
+		"Ahsan/src",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
@@ -51,7 +62,11 @@ project "Ahsan"
 		}
 
 	filter "configurations:Debug"
-		defines "AH_DEBUG"
+		defines 
+		{
+			"AH_DEBUG",
+			"AH_ENABLE_ASSERT"
+		}
 		symbols "On"
 
 	filter "configurations:Release"

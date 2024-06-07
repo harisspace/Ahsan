@@ -2,14 +2,15 @@
 #include "Application.h"
 
 #include "Ahsan/Events/ApplicationEvent.h"
-#include "Ahsan/Log.h"
+
+#include <GLFW/glfw3.h>
 
 
 namespace Ahsan {
 
 	Application::Application()
 	{
-
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Application::~Application()
@@ -19,18 +20,12 @@ namespace Ahsan {
 
 	void Application::Run()
 	{
-		WindowResizeEvent e(1080, 480);
-
-		if (e.IsInCategory(EventCategoryApplication))
+		while (m_Running)
 		{
-			AH_TRACE("hello");
+			glClearColor(1, 0, 1, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
+			m_Window->OnUpdate();
 		}
-		if (e.IsInCategory(EventCategoryInput))
-		{
-			AH_TRACE("World!");
-		}
-
-		while (true);
 	}
 
 }

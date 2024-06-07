@@ -7,6 +7,12 @@
     <Filter Include="Ahsan\Events">
       <UniqueIdentifier>{5444BC37-40A7-4BDC-E92C-8492D56E175F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ahsan\Platform">
+      <UniqueIdentifier>{C4B0FC33-B07E-F039-9912-6160857FCC9E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ahsan\Platform\Windows">
+      <UniqueIdentifier>{FEDE00B3-EAD8-2905-D345-C015BFDE8F71}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Ahsan.h" />
@@ -34,6 +40,12 @@
     <ClInclude Include="src\Ahsan\Log.h">
       <Filter>Ahsan</Filter>
     </ClInclude>
+    <ClInclude Include="src\Ahsan\Platform\Windows\WindowsWindow.h">
+      <Filter>Ahsan\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ahsan\Window.h">
+      <Filter>Ahsan</Filter>
+    </ClInclude>
     <ClInclude Include="src\ahpch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="src\Ahsan\Log.cpp">
       <Filter>Ahsan</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Ahsan\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Ahsan\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\ahpch.cpp" />
   </ItemGroup>
