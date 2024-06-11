@@ -9,8 +9,6 @@ namespace Ahsan {
 	public:
 		inline int GetKeyCode() const { return m_KeyCode; };
 
-
-
 	protected:
 		KeyEvent(int keycode)
 			: m_KeyCode(keycode) {}
@@ -34,6 +32,7 @@ namespace Ahsan {
 		}
 
 		EVENT_CLASS_TYPE(KeyPressed)
+		EVENT_CLASS_CATEGORY(EventCategoryKeyboard)
 	private:
 		int m_RepeatCount;
 	};
@@ -52,5 +51,6 @@ namespace Ahsan {
 		}
 
 		EVENT_CLASS_TYPE(KeyReleased)
+		EVENT_CLASS_CATEGORY(EventCategoryKeyboard)
 	};
 }
