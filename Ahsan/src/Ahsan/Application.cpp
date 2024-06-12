@@ -24,6 +24,9 @@ namespace Ahsan {
 
 	void Application::OnEvent(Event& e)
 	{
+		EventDispatcher dispatcher(e);
+		dispatcher.Dispatch<WindowCloseEvent>(BIND_CALLBACK_FN(&Application::OnWindowClose));
+
 		AH_CORE_TRACE(e.ToString());
 	}
 
@@ -33,6 +36,12 @@ namespace Ahsan {
 		{
 			m_Window->OnUpdate();
 		}
+	}
+
+	bool Application::OnWindowClose(WindowCloseEvent& e)
+	{
+		m_Running = false;
+		return true;
 	}
 
 }

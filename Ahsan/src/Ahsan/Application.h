@@ -3,6 +3,7 @@
 #include "Core.h"
 #include "Events/Event.h"
 #include "Window.h"
+#include "Events/ApplicationEvent.h"
 
 namespace Ahsan {
 
@@ -15,6 +16,7 @@ namespace Ahsan {
 		void Run();
 
 		void OnEvent(Event& e);
+		bool OnWindowClose(WindowCloseEvent& e);
 	private:
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
